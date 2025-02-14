@@ -24,3 +24,24 @@ The API endpoint is: `https://anime-backend-psi.vercel.app/search`
 ## Usage
 
 To use the API, make a GET request to the endpoint with a query parameter `q`:
+```sh
+https://anime-backend-psi.vercel.app/search?q=your_search_query
+```
+
+Replace `your_search_query` with the anime title or keywords you're searching for.  The query will be URL-encoded automatically by the browser.
+
+## Example Response
+
+```json
+[
+  {
+    "title": "[SubsPlease] Jujutsu Kaisen 0 - Movie [1080p] [Multi-Subs]",
+    "links": [
+      {
+        "href": "magnet:?xt=urn:btih:some_magnet_hash",
+        "text": "Magnet",
+        "isMagnet": true
+      },
+  // ... more results
+]
+```
