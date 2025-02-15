@@ -17,20 +17,38 @@ This is a simple API that scrapes data from [animetosho.org](https://animetosho.
 *   **Cheerio**: Library for parsing HTML.
 *   **CORS**: Middleware for enabling Cross-Origin Resource Sharing.
 
-## API Endpoint
+## API Endpoints
 
-The API endpoint is: `https://anime-backend-psi.vercel.app/search`
+The API endpoint are: 
+
+*   `/search`:  Basic search endpoint (returns results from a single page).
+*   `/episodes`:  Enhanced search endpoint with pagination and season/episode filtering.
+
+The API is deployed at: `https://anime-backend-psi.vercel.app/`
 
 ## Usage
 
-To use the API, make a GET request to the endpoint with a query parameter `q`:
+### `/search` Endpoint
+
+To use the basic search endpoint, make a GET request to `/search` with a query parameter `q` and page parameter `page` (defaults to 1):
 ```sh
-https://anime-backend-psi.vercel.app/search?q=your_search_query
+https://anime-backend-psi.vercel.app/search?q=your_search_query&page=1
 ```
 
-Replace `your_search_query` with the anime title or keywords you're searching for.  The query will be URL-encoded automatically by the browser.
+Replace `your_search_query` with the anime title or keywords you're searching for. The query will be URL-encoded automatically by the browser.
 
-## Example Response
+### `/episodes` Endpoint
+
+To use the enhanced search endpoint, make a GET request to `/episodes` with a query parameter `q`:
+```sh
+https://anime-backend-psi.vercel.app/episodes?q=your_search_query&maxSeasons=10&maxEpisodes=50
+```
+*   `q`: The search query (required).
+*   `page`: The page number to retrieve (optional, defaults to 1).
+*   `maxSeasons`: The maximum season number to include in the results (optional, defaults to 10).
+*   `maxEpisodes`: The maximum episode number to include in the results (optional, defaults to 50).
+
+### `/search` Example
 
 ```json
 [
@@ -41,7 +59,36 @@ Replace `your_search_query` with the anime title or keywords you're searching fo
         "href": "magnet:?xt=urn:btih:some_magnet_hash",
         "text": "Magnet",
         "isMagnet": true
-      },
+      }
+    ]
+  },
   // ... more results
 ]
 ```
+
+### `/episodes` Example
+
+```json
+{
+  "Jujutsu Kaisen S01E01": [
+    {
+      "href": "magnet:?xt=urn:btih:magnet_hash_1",
+      "text": "Magnet",
+      "isMagnet": true
+    },
+    // ... other links for S01E01
+  ],
+  "Jujutsu Kaisen S01E02": [
+    {
+      "href": "magnet:?xt=urn:btih:magnet_hash_2",
+      "text": "Magnet",
+      "isMagnet": true
+    },
+    // ... other links for S01E02
+  ],
+  // ... more episodes
+}
+```
+### Disclaimer
+
+This API scrapes data from animetosho.org. The maintainer of this API are not responsible for the content of the search results. Web scraping is a fragile process. Website structure can change, which may break the scraper. I will try to keep it updated, but no guarantee is provided.
