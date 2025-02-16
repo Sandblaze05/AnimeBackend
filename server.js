@@ -33,7 +33,7 @@ app.get('/search', async (req, res) => {
             
             $(element).find('.links a.dlink, .links a[href^="magnet:"]').each((linkIndex, linkElement) => { // Iterate over all <a> in .links
                 const href = $(linkElement).attr('href');
-                const text = $(linkElement).text().trim(); // Get the link text (e.g., "Torrent", "Magnet", "Nyaa")
+                const text = $(linkElement).text().trim(); // Get the link text (e.g., "", "Magnet", "Nyaa")
 
                 links.push({
                     href: href,
