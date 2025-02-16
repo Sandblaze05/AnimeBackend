@@ -5,7 +5,7 @@ This is a simple API that scrapes data from [animetosho.org](https://animetosho.
 ## Features
 
 *   **Search**: Searches animetosho.org based on a query parameter.
-*   **Returns**: Returns a JSON array of search results, each containing the title and an array of available links (torrents, magnet links, etc.).  Each link includes the URL, the link text (e.g., "Torrent", "Magnet"), and a boolean flag indicating if it's a magnet link.
+*   **Returns**: Returns a JSON array of search results, each containing the title and an array of available links (magnet links, etc.).  Each link includes the URL, the link text (e.g., "Magnet"), and a boolean flag indicating if it's a magnet link.
 *   **Error Handling**: Includes basic error handling to catch issues with the web scraping or request processing.
 *   **CORS Enabled**:  CORS is enabled to allow cross-origin requests.
 
