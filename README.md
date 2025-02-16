@@ -24,7 +24,7 @@ The API endpoint are:
 *   `/search`:  Basic search endpoint (returns results from a single page).
 *   `/episodes`:  Enhanced search endpoint with pagination and season/episode filtering.
 
-The API is deployed at: `https://anime-backend-psi.vercel.app/`
+The API is deployed at: `https://anime-backend-psi.vercel.app/` _In case of a gateway timeout use:_`https://animebackend-production.up.railway.app/`
 
 ## Usage
 
