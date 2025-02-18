@@ -1,4 +1,4 @@
-# Anime Search API ![Node.js Logo](https://nodejs.org/static/images/logo.svg)
+# Anime Search API 
 
 This is a simple API that scrapes data from [animetosho.org](https://animetosho.org/) to provide search results for anime releases.  It's built using Node.js with Express, Axios, Cheerio, and CORS.
 
