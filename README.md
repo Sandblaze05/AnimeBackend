@@ -7,9 +7,6 @@ This is a simple API that scrapes data from [animetosho.org](https://animetosho.
 - [Technologies Used](#technologies-used)
 - [API Endpoints](#api-endpoints)
 - [Usage](#usage)
-  - [Setup](#setup)
-  - [Endpoints](#endpoints)
-  - [Examples](#examples)
 - [Disclaimer](#disclaimer)
 
 ## Features
