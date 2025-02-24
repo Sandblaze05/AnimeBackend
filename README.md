@@ -103,6 +103,6 @@ https://anime-backend-psi.vercel.app/episodes?q=your_search_query&maxSeasons=10&
   // ... more episodes
 }
 ```
-### Disclaimer
+## Disclaimer
 
 This API scrapes data from animetosho.org. The maintainer of this API are not responsible for the content of the search results. Web scraping is a fragile process. Website structure can change, which may break the scraper. I will try to keep it updated, but no guarantee is provided.
